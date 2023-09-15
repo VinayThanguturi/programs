@@ -1,0 +1,31 @@
+8. Create a below Table as EMP_Data in SQL Server using SQL DDL Commands column names:
+  EMP No(integer)
+  EMP Name(string)
+  Emp Exp(integer)
+  Emp Department(string)
+  Emp salary(integer)
+Insert data into the EMP_Data Table using SQL DML Commands (different sets of data).
+Write a query to get EMP details, who are working on same department
+
+solution:
+
+Create table EMP_Data(
+  EMP_No int,
+  EMP_Name varchar,
+  EMP_Exp Integer,
+  EMP_Department varchar,
+  EMP_Salary int
+  );
+  insert into EMP_Data values(8122392,"vinay",2,"delivery",30000);
+  insert into EMP_Data values(8133332,"abhisheak",6,"HR",30000);
+  insert into EMP_Data values(7122345,"ramesh",2,"sales",30000);
+  insert into EMP_Data values(3126393,"suresh",2,"account",30000);
+  insert into EMP_Data values(8165391,"govindh",2,"service",30000);
+  insert into EMP_Data values(8932392,"krishna",2,"delivery",30000);
+  insert into EMP_Data values(7422392,"sai",2,"delivery",30000);
+  insert into EMP_Data values(6212239,"billgates",12,"hr",30000);
+  insert into EMP_Data values(8112398,"vijay",2,"delivery",30000);
+  insert into EMP_Data values(812343,"aditya",2,"delivery",30000);
+ 
+  select * from EMP_Data where EMP_Department = "delivery";
+
