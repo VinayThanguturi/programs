@@ -1,3 +1,14 @@
+1. Implement below Program using Java Apache POI Concept. Read data from MS-Excel Sheet
+   and Print it in IDE Console Prepare an Excel Sheet with below columns and insert multiple rows of the data.
+EMP No
+EMP Name
+EMP Designation
+EMP Salary
+EMP Department
+
+
+Solution:
+
 package exceldataread;
 
 import java.io.FileInputStream;
