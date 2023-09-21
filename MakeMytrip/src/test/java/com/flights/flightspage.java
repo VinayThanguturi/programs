@@ -16,6 +16,11 @@ public class flightspage {
 		driver.get("https://www.makemytrip.com/");
 		driver.manage().window().maximize();
 		driver.navigate().refresh();
+		driver.navigate().refresh();
+		Thread.sleep(2000);
+		WebElement close = driver
+				.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/section/span"));
+		close.click();
 		
 		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div/div/nav/ul/li[1]/div/a/span[2]")).click();
 		Thread.sleep(3000);
