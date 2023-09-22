@@ -13,18 +13,21 @@ public class flightspage {
 		// TODO Auto-generated method stub
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.makemytrip.com/");
+		driver.get("https://www.makemytrip.com");
 		driver.manage().window().maximize();
-		driver.navigate().refresh();
-		driver.navigate().refresh();
 		Thread.sleep(2000);
+		
 		WebElement close = driver
 				.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/section/span"));
 		close.click();
-		
-		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div/div/nav/ul/li[1]/div/a/span[2]")).click();
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div[1]/ul/li[2]/span")).click();
+		
+		
+		
+		
+		driver.findElement(By.xpath("//span[@class='chNavIcon appendBottom2 chSprite chFlights active']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div[2]/div[1]/div[1]/label")).click();
 		Thread.sleep(2000);
@@ -38,14 +41,15 @@ public class flightspage {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//*[@id=\"react-autowhatever-1-section-0-item-0\"]/div/div[1]/p[1]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[1]/div/div[1]/p/span[2]/span[2]")).click();
+		driver.findElement(By.xpath("//span[@aria-label='Next Month']")).click();
+		/*driver.findElement(By.xpath("//p[@class='font16 blackText latoBold appendRight30']//span[contains(text(),'Oct')]")).click();*/
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[1]/div[3]/div[4]/div[1]/div/p")).click();
+		driver.findElement(By.xpath("//div[@aria-label='Tue Nov 14 2023']//p[contains(text(),'14')]")).click();
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[1]/div[3]/div[4]/div[7]/div/p")).click();
+		driver.findElement(By.xpath("//div[@aria-label='Sat Nov 18 2023']//div[@class='dateInnerCell']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div[2]/p/a")).click();
-		Thread.sleep(15000);
+		Thread.sleep(20000);
 		
 		driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div[2]/div[2]/div/span")).click();
 		Thread.sleep(3000);
@@ -64,6 +68,7 @@ public class flightspage {
 		
 			
 	}
+	
 	
 
 }
